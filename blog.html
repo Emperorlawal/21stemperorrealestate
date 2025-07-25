@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog – Lawal Elijah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8f8f8;
+      --text: #111;
+      --gray: #666;
+      --gold: #FFD700;
+      --accent: #000;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      padding: 20px 10%;
+      background: var(--accent);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--gold);
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      padding: 80px 10%;
+    }
+
+    .search-bar {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .blog-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .blog-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 20px;
+    }
+
+    .blog-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    .blog-desc {
+      color: var(--gray);
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .read-btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background: var(--accent);
+      color: white;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 10%;
+      background: #111;
+      color: #fff;
+    }
+
+    footer a {
+      color: var(--gold);
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Lawal's Blog</h1>
+  <nav>
+    <a href="index.html">Home</a>
+      <a href="about.html">Meet Lawal Elijah</a>
+      <a href="ebook.html">eBook</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="section">
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search blog titles or keywords..." />
+  </div>
+
+  <div class="blog-grid" id="blogList">
+    <!-- Example Blog -->
+    <div class="blog-card" data-title="Top AI Tools for 2025" data-tags="ai tools automation future">
+      <img src="Top-25-AI-Tools-For-Business--1024x536.jpg" alt="Blog 1" class="blog-img" />
+      <div class="blog-content">
+        <div class="blog-title">Top AI Tools for 2025</div>
+        <div class="blog-desc">Discover the most powerful AI tools changing industries in 2025 and how you can use them today.</div>
+        <a href="blog1.html" class="read-btn">Read More</a>
+      </div>
+    </div>
+
+    <div class="blog-card" data-title="Why Africa Needs Web3" data-tags="africa blockchain crypto web3">
+      <img src="Web-3-Needs-Africa-Not-the-Other-Way-Around.jpg" alt="Blog 2" class="blog-img" />
+      <div class="blog-content">
+        <div class="blog-title">Why Africa Needs Web3</div>
+        <div class="blog-desc">An honest look into how blockchain and decentralized tech could transform Africa’s economy and education.</div>
+        <a href="top.html" class="read-btn">Read More</a>
+      </div>
+    </div>
+
+    <div class="blog-card" data-title="Building with ChatGPT Prompts" data-tags="chatgpt prompts ai content">
+      <img src="chatgpt-1024x512.jpg" alt="Blog 3" class="blog-img" />
+      <div class="blog-content">
+        <div class="blog-title">Building with ChatGPT Prompts</div>
+        <div class="blog-desc">Your ultimate guide to using ChatGPT to build products, create content, and automate tasks.</div>
+        <a href="building.html" class="read-btn">Read More</a>
+      </div>
+    </div>
+
+    <!-- Add more blogs here -->
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Lawal Elijah. All rights reserved.</p>
+  <div>
+    <a href="#">Instagram</a> |
+    <a href="#">GitHub</a> |
+    <a href="#">YouTube</a>
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.getElementById('searchInput');
+  const blogCards = document.querySelectorAll('.blog-card');
+
+  searchInput.addEventListener('input', function () {
+    const searchTerm = this.value.toLowerCase();
+
+    blogCards.forEach(card => {
+      const title = card.dataset.title.toLowerCase();
+      const tags = card.dataset.tags.toLowerCase();
+
+      if (title.includes(searchTerm) || tags.includes(searchTerm)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,76 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>21ST EMPEROR REAL ESTSTE - Home</title>
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me – Lawal Elijah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black: #000;
+      --white: #fff;
+      --gray: #aaa;
+      --gold: #FFD700;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 20px 10%;
+      background: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: var(--gold);
+    }
+
+    nav a {
+      color: var(--gray);
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .section {
+      padding: 80px 10%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--gold);
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: var(--gray);
+      margin-bottom: 20px;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--gold);
+      margin-bottom: 30px;
+    }
+
+    .timeline {
+      border-left: 2px solid var(--gold);
+      padding-left: 20px;
+      margin-top: 30px;
+    }
+
+    .timeline-item {
+      margin-bottom: 20px;
+    }
+
+    .timeline-item h4 {
+      margin: 0;
+      color: var(--white);
+    }
+
+    .timeline-item small {
+      color: var(--gray);
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      color: var(--white);
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .btn {
+      background: var(--gold);
+      color: #000;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--gold);
+      margin: 0 10px;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 60px 5%;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!--Header-->
-    <header>
-            <div class="logo">
-                <img src="logo.png" alt="21st Emperor Logo"
-            </div>
-            <nav>
-            <ul>
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="Properties.html">Properties</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="mortgage.html">Mortgage Calculator</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Testimonals</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="about-intro">
-            <h1>About Us.</h1>
-            <p>At 21st EMPEROR REAL ESTATE, we are a trusted name in property services across Africa, specializing in renting, selling and leasing residential and commercial properties. With a strong presence in West Africa, Tunisia, Egypt, and Africa, our mission is to provide clients with seamless real estate solutions backed with integrity, excellence, and deep market insight. Whether you're a first time homebuyer, an investor, or a business looking for space, we offer personalized guidance, verified listings, and end to end support. Our team is committed to delivering results that meets your goals- from urban apartments to luxurious villas and strategic commercial spaces. We dont just sell properties - we build long term relationships based on Trust and Satisfaction.</p>
-        </section>
-        <section class="mission-vision">
-            <div class="box">
-                <h2>Our Mission.</h2>
-                <p>Our Mission at 21ST EMPEROR REAL ESTATE is to empower individuals, families, and businesses across Africa by providing access to realiable, high-quality property services. We strife to simplify the process of renting, buying and leasing through honesty, innovation, and personalozed support. By building strong relationships and delivering expectional value, we aim to become the most trusted real estate partner in West Africa, Tunisia, Egypt, and South Africa.</p>
-            </div>
-            <div class="box">
-                <h2>Our Vision</h2>
-                <p>At 21ST EMPEROR REAL ESTATE, our vision is to become the most trusted and dynamic real estate company in Africa, recongnized for leading innovation and service excellence. We aspire to transform the real estate experience by delivering world class solutions that adapt to the evoling needs of our clients. Through technology, expertise and a commitment to quality, we aim to shape the future of property services across West Afriica, Tunisia, Egypt and South Africa.</p>
-            </div>
-        </section>
-        <section class="why-choose-us">
-            <h2>Why Choose 21st Emperor?</h2>
-            <ul>
-                <li>Professional and Experienced Team.</li>
-                <li>Comprehensive Property Listing.</li>
-                <li>Customer First Approach.</li>
-                <li>Affordable and Transparent Pricing.</li>
-                <li>Affordable Entry Cost.</li>
-                <li>Diverse Property Opportunities.</li>
-                <li>Untapped Growth Potentials.</li>
-            </ul>
-        </section>
-    </main>
-    <!--Footer-->
-    <footer>
-        <ul>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="aboutbusiness.html">About the Team & Business</a></li>
-        </ul>
-    <div class="social-media">
-        <a href="www.facebook.com/21stemperor" target="_blank"><img src="facebook.webp" alt="Facebook"></a>
-        <a href="www.instagram.com/iam21stemperor" target="_blank"><img src="Instagram.png" alt="Instagram"></a>
-        <a href="www.youtube.com/@lawalelijah21" target="_blank"><img src="youtube.png" alt="Youtube"></a>
-        <a href="wa.link/bkvqto" target="_blank"><img src="whatsapp.png" alt="Whatsapp"></a>
-        <a href="#" target="_blank"><img src="signal.jpg" alt="Signal"></a>
-        <a href="https://vm.tiktok.com/ZMBgKtCcr/" target="_blank"><img src="tiktok.webp" alt="Tiktok"></a>
-        <a href="www.x.com/21stEmperor217" target="_blank"><img src="x.webp" alt="X"></a>
+
+<header>
+  <h1>Lawal Elijah</h1>
+  <nav>
+    <a href="index.html">Home</a>
+      <a href="about.html">Meet Lawal Elijah</a>
+      <a href="ebook.html">eBook</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="section" id="intro">
+  <img src="Elijah (1).jpg" alt="Lawal Elijah" class="profile-pic" />
+  <h2>Who is Lawal Elijah?</h2>
+  <p>I’m a tech creative and AI strategist using the power of code, content, and crypto to push Africa and the web into the future. This space is where I share my journey, projects, and passions.</p>
+</section>
+
+<section class="section" id="mission">
+  <h2>My Mission</h2>
+  <p>To build digital tools that empower creators, educate communities, and bridge the tech gap across Africa using AI, Web3, and African Culture Storytelling.</p>
+</section>
+
+<section class="section" id="interests">
+  <h2>Passions & Interests</h2>
+  <ul>
+    <li>🤖 AI Agents & Prompt Engineering</li>
+    <li>🌍 African Innovation & Storytelling</li>
+    <li>💻 Web Design & Development</li>
+    <li>💰 Crypto, NFTs & Web3 Strategy</li>
+    <li>🧳 Travel & Culture Exchange</li>
+  </ul>
+</section>
+
+<section class="section" id="journey">
+  <h2>My Journey</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h4>2024 – Started Learning Web Development</h4>
+      <small>Learnt How to Use Google Sites from my Uncle then went ahead to teach myself Html, Css & JavaScript with the Help of ChatGPT and Grok AI. </small>
     </div>
-    <p>&copy; 2025 21ST EMPEROR REAL ESTATE</p>
+    <div class="timeline-item">
+      <h4>2024 – Got Into AI + Prompt Engineering</h4>
+      <small>My Uncle Introduced me to ChatGPT and since then been learning Prompt Engineering to get the right results from AI. Although learning AI Agents and AI Automation.</small>
+    </div>
+    <div class="timeline-item">
+      <h4>2025 – Building African Cultures Blog</h4>
+      <small>Currently working on an African Dedicated Blog Website to Tell about African Cultures,Landmark,Leaders,Heroes etc.</small>
+    </div>
+    <div class="timeline-item">
+      <h4>2025 – Launched Echo Of The Past</h4>
+      <small>Sharing African Stories, Cultures, Landmark etc through my Youtube Channel. With 400+ subscribers, I Share African Stories to The World. </small>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="fun">
+  <h2>Fun Facts</h2>
+  <ul>
+    <li>My Favorite Sports are Football and Basketball.</li>
+    <li>My Favorite Sports Team is Manchester City💙, FC Barcelona and FC Bayern Munchen</li>
+    <li>My Favorite African Countries are Nigeria, Egypt, Algeria, South Africa, Tunisia, Tanzania</li>
+    <li>My Favorite Countries Outside Africa is Germany, United Kingdom, Canada and Spain.</li>
+    <li>Just to mention a few Fav. Artist, Nemzzz,Kidwild,BurnaBoy,Toosii,21Savage</li>
+    <li>I love the aesthetics of futuristic tech (Apple.com vibes ✨).</li>
+    <li>My favorite continent? Africa — every single time.</li>
+  </ul>
+</section>
+
+<section class="section cta">
+  <h2>Want to Work With Me?</h2>
+  <p>Whether it's web development, an AI solution, or let’s Build Africa Together — let’s connect and make it happen.</p>
+  <a href="contact.html"><button class="btn">Contact Me</button></a>
+</section>
+
+<footer>
+  <p>&copy; 2025 Lawal Elijah. All Rights Reserved.</p>
+  <div>
+    <a href="#">Instagram</a> |
+    <a href="#">GitHub</a> |
+    <a href="#">YouTube</a>
+  </div>
 </footer>
+
 </body>
 </html>
